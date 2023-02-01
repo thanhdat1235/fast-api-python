@@ -15,4 +15,4 @@ def test_post_home():
     response = client.post("/")
     assert response.status_code == 200
     assert "application/json" in response.headers["content-type"]
-    assert response.json() == {"Hello world"}
+    assert response.json() == {"hello": "world"}
